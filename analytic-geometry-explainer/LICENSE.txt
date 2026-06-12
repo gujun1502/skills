@@ -1,0 +1,11 @@
+analytic-geometry-explainer skill
+==================================
+
+Distilled from the user's own "V3 series" analytic-geometry diagrams
+(tree-ring three-cut method). For the user's personal and internal use.
+
+The bundled reference images under assets/ are derived from the user's
+own generated output and are included solely as visual north-stars for
+reproducing the aesthetic. Do not redistribute as standalone artwork.
+
+Code (scripts/) may be freely modified and adapted for new principles.

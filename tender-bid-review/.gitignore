@@ -1,0 +1,8 @@
+# 本单位真实资料默认不入库（仅保留模板与说明）。如需随仓库同步，删除对应行。
+company-profile/*.csv
+company-profile/*.xlsx
+company-profile/*.xls
+company-profile/*.pdf
+company-profile/*.png
+company-profile/*.jpg
+company-profile/company-profile-filled.md
