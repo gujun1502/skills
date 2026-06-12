@@ -100,3 +100,11 @@ h0_needed = sqrt(M*1e6 / (fy * rho * beam_b * 0.9))
 - 加固分析必须包含**二次受力**判断，否则会高估加固后的安全裕度。
 - 报告数值要可追溯：每个结论都附计算式与对比倍数，避免"定性空话"。
 - 中文 PDF 在非 Windows 环境需改用对应中文字体路径（如 Linux 的文泉驿/Noto CJK）。
+
+## License
+
+SPDX-License-Identifier: Apache-2.0
+
+Copyright (c) 2026 jun gu
+
+Licensed under the Apache License, Version 2.0.

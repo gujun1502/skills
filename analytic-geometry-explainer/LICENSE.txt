@@ -1,6 +1,8 @@
 analytic-geometry-explainer skill
 ==================================
 
+Copyright (c) 2026 jun gu
+
 Distilled from the user's own "V3 series" analytic-geometry diagrams
 (tree-ring three-cut method). For the user's personal and internal use.
 

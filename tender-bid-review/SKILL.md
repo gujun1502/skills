@@ -115,3 +115,11 @@ description: >-
 - `capability-boundary.md` —— 资质能力边界自评矩阵 + 三情景排位测算法
 - `review-report-template.md` —— 复盘报告输出模板
 - `case-library.md` —— 两个实战案例（华电雄安·中标结果复盘；兴业银行·流标重招对比）
+
+## License
+
+SPDX-License-Identifier: Apache-2.0
+
+Copyright (c) 2026 jun gu
+
+Licensed under the Apache License, Version 2.0.

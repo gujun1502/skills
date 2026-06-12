@@ -101,3 +101,11 @@ python scripts/md_to_pdf.py "路径/第N轮审美分析报告.md" -o "路径/第
 - `references/scoring-frameworks.md` — 全套量化评分框架与判级标准（每轮取用）
 - `references/report-structure.md` — 报告 markdown 骨架模板
 - `scripts/md_to_pdf.py` — 通用 markdown → 中文 PDF 渲染器
+
+## License
+
+SPDX-License-Identifier: Apache-2.0
+
+Copyright (c) 2026 jun gu
+
+Licensed under the Apache License, Version 2.0.

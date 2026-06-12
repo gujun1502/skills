@@ -149,3 +149,11 @@ python scripts/annotate.py --pdf "主文档.pdf" --annotations annotations.json 
 - **主 PDF 是扫描件取不到文字** → 先 OCR, 或意见改人工录入, 核对步骤靠人读图。
 - **批注框遮挡原文** → 调 `position` 或升 `--dpi` 后再标。
 - **字间有空格命中不到** → audit 已自动去空格, 关键词也尽量取短稳定子串。
+
+## License
+
+SPDX-License-Identifier: Apache-2.0
+
+Copyright (c) 2026 jun gu
+
+Licensed under the Apache License, Version 2.0.
