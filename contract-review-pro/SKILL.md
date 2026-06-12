@@ -164,6 +164,6 @@ See **[references/examples.md](references/examples.md)** for a full workflow exa
 
 SPDX-License-Identifier: Apache-2.0
 
-Copyright (c) 2026 JiCheng
+Copyright (c) 2026 jun gu
 
 Licensed under the Apache License, Version 2.0. See repository root `LICENSE`.
