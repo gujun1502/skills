@@ -1,0 +1,6 @@
+# stock-tp 依赖
+# 安装： pip install -r requirements.txt
+akshare>=1.16        # A股/港股 行情·财报·资金流·筹码·龙虎榜
+yfinance>=0.2.40     # 美股/港股/日股/韩股 行情与基本面
+pandas>=2.0          # 数据处理与指标计算
+# 标准库 urllib 已足够调用 Anspire Search / OpenAI 兼容 LLM，无需 requests/openai

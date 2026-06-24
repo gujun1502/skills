@@ -1,0 +1,225 @@
+{
+  "_README": "板块联动与信息面配置。键=股票代码，值=该股的联动参数。fetch_linkage.py / premarket.py 读取。weight 是该联动维度对早盘判断的相对权重(0~1，组内会自动归一化)。overnight_proxies 用 yfinance 代码(美股/亚太)，peers/etfs 用 A股代码。可随时增删。",
+
+  "002156": {
+    "name": "通富微电",
+    "core_sectors": [
+      {"name": "封装测试", "weight": 1.0},
+      {"name": "芯片/半导体", "weight": 0.9},
+      {"name": "存储", "weight": 0.6},
+      {"name": "光通讯", "weight": 0.4},
+      {"name": "软件/算力", "weight": 0.3}
+    ],
+    "peers": [
+      {"code": "600584", "name": "长电科技"},
+      {"code": "002185", "name": "华天科技"},
+      {"code": "688362", "name": "甬矽电子"}
+    ],
+    "etfs": [
+      {"code": "159801", "name": "广发半导体芯片ETF"},
+      {"code": "512480", "name": "国联安半导体ETF"},
+      {"code": "515050", "name": "华夏电子ETF(5G通信)"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "SOXX", "name": "费城半导体ETF(隔夜)", "weight": 1.0},
+      {"symbol": "AAPL", "name": "苹果(供应链)", "weight": 0.7},
+      {"symbol": "NVDA", "name": "英伟达(先进封装需求)", "weight": 0.6},
+      {"symbol": "005930.KS", "name": "三星电子(存储/亚太早盘)", "weight": 0.5},
+      {"symbol": "000660.KS", "name": "SK海力士(存储/亚太早盘)", "weight": 0.5},
+      {"symbol": "TSM", "name": "台积电(代工景气)", "weight": 0.5}
+    ],
+    "themes": [
+      "苹果供应链", "先进封装/Chiplet", "存储涨价周期",
+      "A50成分入围预期", "国产替代", "AI算力封装(HBM/2.5D/3D)"
+    ],
+    "notes": "封测环节景气滞后晶圆代工与设计；隔夜看 SOXX/NVDA/AAPL 与亚太三星海力士，当日看封测同业与电子ETF合力。"
+  },
+
+  "300223": {
+    "name": "北京君正",
+    "core_sectors": [
+      {"name": "存储芯片", "weight": 1.0},
+      {"name": "芯片/半导体", "weight": 0.9},
+      {"name": "车规/汽车电子", "weight": 0.7},
+      {"name": "MCU/模拟", "weight": 0.5}
+    ],
+    "peers": [
+      {"code": "603986", "name": "兆易创新"},
+      {"code": "301308", "name": "江波龙"},
+      {"code": "688110", "name": "东芯股份"},
+      {"code": "688525", "name": "佰维存储"}
+    ],
+    "etfs": [
+      {"code": "159801", "name": "广发半导体芯片ETF"},
+      {"code": "512480", "name": "国联安半导体ETF"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "MU", "name": "美光(存储龙头/隔夜)", "weight": 1.0},
+      {"symbol": "000660.KS", "name": "SK海力士(存储/亚太早盘)", "weight": 0.8},
+      {"symbol": "005930.KS", "name": "三星电子(存储/亚太早盘)", "weight": 0.7},
+      {"symbol": "SOXX", "name": "费城半导体ETF", "weight": 0.6}
+    ],
+    "themes": [
+      "存储涨价周期", "车规存储(DDR/车载)", "国产替代", "MCU复苏", "AIoT"
+    ],
+    "notes": "车规与利基存储为主，景气跟随存储大周期；隔夜重点看美光与韩系存储。"
+  },
+
+  "603986": {
+    "name": "兆易创新",
+    "core_sectors": [
+      {"name": "NOR Flash存储", "weight": 1.0},
+      {"name": "芯片/半导体", "weight": 0.9},
+      {"name": "MCU", "weight": 0.8},
+      {"name": "传感器", "weight": 0.3}
+    ],
+    "peers": [
+      {"code": "300223", "name": "北京君正"},
+      {"code": "301308", "name": "江波龙"},
+      {"code": "688766", "name": "普冉股份"},
+      {"code": "688110", "name": "东芯股份"}
+    ],
+    "etfs": [
+      {"code": "159801", "name": "广发半导体芯片ETF"},
+      {"code": "512480", "name": "国联安半导体ETF"},
+      {"code": "159995", "name": "芯片ETF"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "MU", "name": "美光(存储/隔夜)", "weight": 1.0},
+      {"symbol": "000660.KS", "name": "SK海力士(存储/亚太早盘)", "weight": 0.7},
+      {"symbol": "005930.KS", "name": "三星电子(存储/亚太早盘)", "weight": 0.7},
+      {"symbol": "SOXX", "name": "费城半导体ETF", "weight": 0.6}
+    ],
+    "themes": [
+      "NOR Flash涨价", "MCU需求复苏", "存储涨价周期", "国产替代", "工业/汽车需求"
+    ],
+    "notes": "NOR Flash 与 MCU 双主线，对存储价格与工业需求弹性大；隔夜看美光与韩系。"
+  },
+
+  "301308": {
+    "name": "江波龙",
+    "core_sectors": [
+      {"name": "存储模组", "weight": 1.0},
+      {"name": "存储芯片", "weight": 0.9},
+      {"name": "芯片/半导体", "weight": 0.7},
+      {"name": "消费电子", "weight": 0.5},
+      {"name": "企业级存储", "weight": 0.5}
+    ],
+    "peers": [
+      {"code": "603986", "name": "兆易创新"},
+      {"code": "300223", "name": "北京君正"},
+      {"code": "688525", "name": "佰维存储"},
+      {"code": "688110", "name": "东芯股份"}
+    ],
+    "etfs": [
+      {"code": "159801", "name": "广发半导体芯片ETF"},
+      {"code": "512480", "name": "国联安半导体ETF"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "MU", "name": "美光(存储龙头/隔夜)", "weight": 1.0},
+      {"symbol": "000660.KS", "name": "SK海力士(DRAM/HBM/亚太早盘)", "weight": 0.9},
+      {"symbol": "005930.KS", "name": "三星电子(存储/亚太早盘)", "weight": 0.8},
+      {"symbol": "WDC", "name": "西部数据(NAND/存储)", "weight": 0.6}
+    ],
+    "themes": [
+      "存储涨价周期(DRAM/NAND/模组)", "AI带动企业级存储需求", "eMMC/UFS/SSD",
+      "消费电子复苏", "国产存储模组"
+    ],
+    "notes": "存储模组弹性最大、与存储现货价高度联动；隔夜看美光与韩系 DRAM/NAND 报价信号。"
+  },
+
+  "688256": {
+    "name": "寒武纪",
+    "core_sectors": [
+      {"name": "AI芯片/算力", "weight": 1.0},
+      {"name": "芯片/半导体", "weight": 0.8},
+      {"name": "国产GPU/算力", "weight": 0.9},
+      {"name": "AI大模型", "weight": 0.6}
+    ],
+    "peers": [
+      {"code": "688041", "name": "海光信息"},
+      {"code": "688047", "name": "龙芯中科"},
+      {"code": "300474", "name": "景嘉微"},
+      {"code": "688521", "name": "芯原股份"}
+    ],
+    "etfs": [
+      {"code": "159819", "name": "人工智能ETF"},
+      {"code": "512480", "name": "国联安半导体ETF"},
+      {"code": "159995", "name": "芯片ETF"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "NVDA", "name": "英伟达(AI算力风向标/隔夜)", "weight": 1.0},
+      {"symbol": "AMD", "name": "AMD(AI加速/隔夜)", "weight": 0.7},
+      {"symbol": "AVGO", "name": "博通(ASIC算力)", "weight": 0.5},
+      {"symbol": "TSM", "name": "台积电(先进制程代工)", "weight": 0.5},
+      {"symbol": "SOXX", "name": "费城半导体ETF", "weight": 0.5}
+    ],
+    "themes": [
+      "AI算力国产化", "国产GPU/AI芯片替代", "大模型训练推理需求",
+      "算力基建/智算中心", "出口管制下的自主可控"
+    ],
+    "notes": "国产AI算力核心标的，弹性高、情绪驱动强；隔夜紧盯英伟达与AI链，注意高位波动与政策催化。"
+  },
+
+  "688371": {
+    "name": "菲沃泰",
+    "core_sectors": [
+      {"name": "纳米镀膜/防护涂层", "weight": 1.0},
+      {"name": "消费电子", "weight": 0.9},
+      {"name": "苹果产业链", "weight": 0.8},
+      {"name": "电子材料", "weight": 0.6},
+      {"name": "专用设备/新能源镀膜", "weight": 0.3}
+    ],
+    "peers": [
+      {"code": "002635", "name": "安洁科技(苹果链功能件)"},
+      {"code": "300115", "name": "长盈精密(消费电子精密件)"},
+      {"code": "002600", "name": "领益智造(消费电子)"}
+    ],
+    "etfs": [
+      {"code": "159732", "name": "消费电子ETF"},
+      {"code": "515050", "name": "华夏电子ETF(5G通信)"}
+    ],
+    "overnight_proxies": [
+      {"symbol": "AAPL", "name": "苹果(核心客户/隔夜)", "weight": 1.0},
+      {"symbol": "2317.TW", "name": "鸿海富士康(苹果组装链/亚太)", "weight": 0.6},
+      {"symbol": "SOXX", "name": "费城半导体ETF(电子大盘参考)", "weight": 0.3}
+    ],
+    "themes": [
+      "苹果供应链", "纳米镀膜/防水防护", "消费电子复苏", "折叠屏/手机防护",
+      "半导体与新能源镀膜应用拓展", "国产替代"
+    ],
+    "notes": "纳米镀膜利基龙头，下游为消费电子(防水防护)与苹果链，需求随消费电子景气与苹果新机周期波动；隔夜看苹果与组装链，与存储/AI芯片主线相关度低，不宜与存储三兄弟混判。"
+  },
+
+  "_default": {
+    "name": "",
+    "core_sectors": [],
+    "peers": [],
+    "etfs": [{"code": "159995", "name": "芯片ETF(占位，请按行业改)"}],
+    "overnight_proxies": [
+      {"symbol": "^GSPC", "name": "标普500", "weight": 0.5},
+      {"symbol": "^IXIC", "name": "纳斯达克", "weight": 0.6}
+    ],
+    "themes": [],
+    "notes": "未在表中登记的股票走默认联动(仅大盘隔夜)。建议为每只重点股单独登记一条。"
+  },
+
+  "_global_macro": {
+    "_README": "全局宏观隔夜锚定，所有股票通用(模块①的大盘部分)。",
+    "us_overnight": [
+      {"symbol": "^GSPC", "name": "标普500"},
+      {"symbol": "^IXIC", "name": "纳斯达克"},
+      {"symbol": "^SOX", "name": "费城半导体指数"}
+    ],
+    "asia_morning": [
+      {"symbol": "^N225", "name": "日经225(已开盘)"},
+      {"symbol": "^KS11", "name": "韩国综指KOSPI(已开盘)"},
+      {"symbol": "^HSI", "name": "恒生指数"}
+    ],
+    "rates_fx": [
+      {"symbol": "CNY=X", "name": "美元兑人民币", "bullish_when": "down"},
+      {"symbol": "^TNX", "name": "美10年期国债收益率", "bullish_when": "down"},
+      {"symbol": "DX-Y.NYB", "name": "美元指数", "bullish_when": "down"}
+    ]
+  }
+}
